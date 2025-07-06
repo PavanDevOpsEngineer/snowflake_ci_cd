@@ -11,6 +11,7 @@ def execute_sql_file(cursor, file_path):
 def main(env):
     conn = snowflake.connector.connect(
         account=os.getenv('SNOWFLAKE_ACCOUNT'),
+        url=os.getenv('SNOWFLAKE_URL'),
         user=os.getenv('SNOWFLAKE_USER'),
         password=os.getenv('SNOWFLAKE_PASSWORD'),
         role=os.getenv('SNOWFLAKE_ROLE'),
